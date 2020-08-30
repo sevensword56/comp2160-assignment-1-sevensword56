@@ -49,7 +49,6 @@ public class Player : MonoBehaviour
             bullet.transform.position = transform.position;
             bullet.yMovement = fireVertical;
             bullet.xMovement = fireHorizontal;
-            bullet.transform.parent = transform;
         }
     }
 }
