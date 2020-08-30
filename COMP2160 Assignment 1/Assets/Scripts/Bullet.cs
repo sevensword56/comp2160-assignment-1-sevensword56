@@ -22,4 +22,10 @@ public class Bullet : MonoBehaviour
 
         transform.Translate(movementHorizontal, movementVertical, 0);
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Destroy(gameObject);
+        Debug.Log("why no destroy");
+    }
 }
