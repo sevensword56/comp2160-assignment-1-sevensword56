@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float playerSpeed = 1.0f;
-    public Bullet prefab;
+    public Bullet bulletPrefab;
     public float bulletDelay = 1.0f;
 
     private float timer = 0.0f;
@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
         if((fireVertical != 0 || fireHorizontal != 0) && timer <= 0)
         {
             timer = bulletDelay;
-            Bullet bullet = Instantiate(prefab);
+            Bullet bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position;
             bullet.yMovement = fireVertical;
             bullet.xMovement = fireHorizontal;
