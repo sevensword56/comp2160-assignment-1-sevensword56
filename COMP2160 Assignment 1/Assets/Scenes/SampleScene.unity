@@ -299,10 +299,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1176758918}
   target2: {fileID: 1601290132}
   target3: {fileID: 1830479347}
+  isActive: 0
 --- !u!1 &199297735
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,10 +348,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1348590345}
   target2: {fileID: 1286474402}
   target3: {fileID: 1815566801}
+  isActive: 0
 --- !u!1 &327385442
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,10 +613,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1176758918}
   target2: {fileID: 1601290132}
   target3: {fileID: 1830479347}
+  isActive: 0
 --- !u!1 &654651020
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,10 +795,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1176758918}
   target2: {fileID: 1601290132}
   target3: {fileID: 1830479347}
+  isActive: 0
 --- !u!1 &930036876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1014,7 @@ Transform:
   m_LocalScale: {x: 0.11869271, y: 0.11869271, z: 0.11869271}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1010892333
 MonoBehaviour:
@@ -1029,7 +1029,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 8
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 8756430939659256735, guid: 2c4988e22e4bf3a48b3f17ff0901ce5d,
+    type: 3}
   bulletDelay: 0.5
 --- !u!58 &1010892334
 CircleCollider2D:
@@ -1243,10 +1244,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 523099347}
   target2: {fileID: 755039097}
   target3: {fileID: 120589460}
+  isActive: 0
+--- !u!1 &1215244497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215244499}
+  - component: {fileID: 1215244498}
+  m_Layer: 0
+  m_Name: SpawnerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1215244498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215244497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d3cab115ce6c243ba92b5d1cb943f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDelayMin: 1
+  enemyDelayMax: 2
+  timeOfStages: 30
+  minAtSpawn: 1
+  maxAtSpawn: 5
+  topLeft: {fileID: 523099348}
+  topMiddle: {fileID: 755039098}
+  topRight: {fileID: 120589461}
+  rightTop: {fileID: 1477748506}
+  rightMiddle: {fileID: 2006098118}
+  rightBottom: {fileID: 199297737}
+  bottomLeft: {fileID: 1176758919}
+  bottomMiddle: {fileID: 1601290133}
+  bottomRight: {fileID: 1830479348}
+  leftTop: {fileID: 1348590346}
+  leftMiddle: {fileID: 1286474403}
+  leftBottom: {fileID: 1815566802}
+--- !u!4 &1215244499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215244497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: -0.092286594, z: -11.571289}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1286474401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,10 +1353,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1477748505}
   target2: {fileID: 2006098117}
   target3: {fileID: 199297736}
+  isActive: 0
 --- !u!1 &1289994770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,10 +1532,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1477748505}
   target2: {fileID: 2006098117}
   target3: {fileID: 199297736}
+  isActive: 0
 --- !u!1 &1477748504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,10 +1581,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1348590345}
   target2: {fileID: 1286474402}
   target3: {fileID: 1815566801}
+  isActive: 0
 --- !u!1 &1576815399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1621,7 @@ Transform:
   - {fileID: 10309773}
   - {fileID: 1289994771}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1601290131
 GameObject:
@@ -1607,10 +1668,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 523099347}
   target2: {fileID: 755039097}
   target3: {fileID: 120589460}
+  isActive: 0
 --- !u!1 &1660949743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,10 +1977,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1477748505}
   target2: {fileID: 2006098117}
   target3: {fileID: 199297736}
+  isActive: 0
 --- !u!1 &1830479346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,10 +2026,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 523099347}
   target2: {fileID: 755039097}
   target3: {fileID: 120589460}
+  isActive: 0
 --- !u!1 &2006098116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,7 +2075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360922104329594356, guid: 1c81031760eaf6846a0915ebafa7da13,
     type: 3}
-  enemyDelay: 1
   target1: {fileID: 1348590345}
   target2: {fileID: 1286474402}
   target3: {fileID: 1815566801}
+  isActive: 0

@@ -5,27 +5,23 @@ using UnityEngine;
 public class WallSpawner : MonoBehaviour
 {
     public Enemy enemyPrefab;
-    public float enemyDelay = 5.0f;
     public Transform target1;
     public Transform target2;
     public Transform target3;
+    public bool isActive = false;
 
-    private float timer = 1.0f;
     private Transform targetFinal;
     private bool targetSelected = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = enemyDelay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if(targetSelected == false)
+        if(targetSelected == false && isActive == true)
         {
             int targetNumber = Random.Range(1, 4);
 
@@ -44,14 +40,15 @@ public class WallSpawner : MonoBehaviour
             targetSelected = true;
         }
 
-        if(timer <= 0 && targetSelected == true)
+        if(targetSelected == true)
         {
             Enemy enemy = Instantiate(enemyPrefab);
             enemy.transform.parent = transform;
             enemy.transform.position = transform.position;
             enemy.target = targetFinal;
             targetSelected = false;
-            timer = enemyDelay;
+            isActive = false;
         }
     }
+
 }
