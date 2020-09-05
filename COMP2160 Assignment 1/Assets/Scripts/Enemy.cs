@@ -7,7 +7,9 @@ public class Enemy : MonoBehaviour
     public Transform target;
     public Transform player;
     public float enemySpeed = 1.0f, minBulletTime = 1.0f, maxBulletTime = 1.0f;
-    public BulletEnemy prefab;
+    public BulletEnemy bulletPrefab;
+    public Coin coinPrefab;
+    public Player playerScript;
 
     private float randomBulletTime = 1.0f, timeActive = 0.0f;
     private bool hasShot = false;
@@ -27,9 +29,8 @@ public class Enemy : MonoBehaviour
 
         if(randomBulletTime >= timeActive && hasShot == false)
         {
-            BulletEnemy bullet = Instantiate(prefab);
+            BulletEnemy bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position;
-            //bullet.transform.parent = transform;
             bullet.playerDirection = player.position;
             hasShot = true;
         }
@@ -37,6 +38,9 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        Coin coin = Instantiate(coinPrefab);
+        coin.transform.position = transform.position;
+        coin.playerScript = playerScript;
         Destroy(gameObject);
     }
 }

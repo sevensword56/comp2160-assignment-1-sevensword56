@@ -23,4 +23,9 @@ public class BulletEnemy : MonoBehaviour
         //if(transform.position == endDirection)
         //    endDirection *= 2;
     }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }

@@ -304,6 +304,7 @@ MonoBehaviour:
   target3: {fileID: 1830479347}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &199297735
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +355,7 @@ MonoBehaviour:
   target3: {fileID: 1815566801}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &327385442
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +622,7 @@ MonoBehaviour:
   target3: {fileID: 1830479347}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &654651020
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +806,7 @@ MonoBehaviour:
   target3: {fileID: 1830479347}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &930036876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,6 +1040,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8756430939659256735, guid: 2c4988e22e4bf3a48b3f17ff0901ce5d,
     type: 3}
   bulletDelay: 0.5
+  coinScore: 200
+  score: 0
 --- !u!58 &1010892334
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1253,6 +1259,7 @@ MonoBehaviour:
   target3: {fileID: 120589460}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &1215244497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1370,7 @@ MonoBehaviour:
   target3: {fileID: 199297736}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &1289994770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,6 +1551,7 @@ MonoBehaviour:
   target3: {fileID: 199297736}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &1477748504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1602,7 @@ MonoBehaviour:
   target3: {fileID: 1815566801}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &1576815399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,6 +1691,7 @@ MonoBehaviour:
   target3: {fileID: 120589460}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &1660949743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +2002,7 @@ MonoBehaviour:
   target3: {fileID: 199297736}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &1830479346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,6 +2053,7 @@ MonoBehaviour:
   target3: {fileID: 120589460}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
 --- !u!1 &2006098116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,3 +2104,4 @@ MonoBehaviour:
   target3: {fileID: 1815566801}
   player: {fileID: 1010892332}
   isActive: 0
+  playerScript: {fileID: 1010892333}
