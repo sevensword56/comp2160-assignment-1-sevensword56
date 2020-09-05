@@ -129,7 +129,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  player: {fileID: 0}
   enemySpeed: 10
+  minBulletTime: 1
+  maxBulletTime: 4
+  prefab: {fileID: 3774660279267361189, guid: 70ee0487d07756c4684c726f15d70e0e, type: 3}
 --- !u!50 &-7064357246743702644
 Rigidbody2D:
   serializedVersion: 4

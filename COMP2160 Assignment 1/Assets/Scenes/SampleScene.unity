@@ -302,6 +302,7 @@ MonoBehaviour:
   target1: {fileID: 1176758918}
   target2: {fileID: 1601290132}
   target3: {fileID: 1830479347}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &199297735
 GameObject:
@@ -351,6 +352,7 @@ MonoBehaviour:
   target1: {fileID: 1348590345}
   target2: {fileID: 1286474402}
   target3: {fileID: 1815566801}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &327385442
 GameObject:
@@ -616,6 +618,7 @@ MonoBehaviour:
   target1: {fileID: 1176758918}
   target2: {fileID: 1601290132}
   target3: {fileID: 1830479347}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &654651020
 GameObject:
@@ -798,6 +801,7 @@ MonoBehaviour:
   target1: {fileID: 1176758918}
   target2: {fileID: 1601290132}
   target3: {fileID: 1830479347}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &930036876
 GameObject:
@@ -1247,6 +1251,7 @@ MonoBehaviour:
   target1: {fileID: 523099347}
   target2: {fileID: 755039097}
   target3: {fileID: 120589460}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &1215244497
 GameObject:
@@ -1356,6 +1361,7 @@ MonoBehaviour:
   target1: {fileID: 1477748505}
   target2: {fileID: 2006098117}
   target3: {fileID: 199297736}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &1289994770
 GameObject:
@@ -1535,6 +1541,7 @@ MonoBehaviour:
   target1: {fileID: 1477748505}
   target2: {fileID: 2006098117}
   target3: {fileID: 199297736}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &1477748504
 GameObject:
@@ -1584,6 +1591,7 @@ MonoBehaviour:
   target1: {fileID: 1348590345}
   target2: {fileID: 1286474402}
   target3: {fileID: 1815566801}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &1576815399
 GameObject:
@@ -1671,6 +1679,7 @@ MonoBehaviour:
   target1: {fileID: 523099347}
   target2: {fileID: 755039097}
   target3: {fileID: 120589460}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &1660949743
 GameObject:
@@ -1980,6 +1989,7 @@ MonoBehaviour:
   target1: {fileID: 1477748505}
   target2: {fileID: 2006098117}
   target3: {fileID: 199297736}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &1830479346
 GameObject:
@@ -2029,6 +2039,7 @@ MonoBehaviour:
   target1: {fileID: 523099347}
   target2: {fileID: 755039097}
   target3: {fileID: 120589460}
+  player: {fileID: 1010892332}
   isActive: 0
 --- !u!1 &2006098116
 GameObject:
@@ -2078,4 +2089,5 @@ MonoBehaviour:
   target1: {fileID: 1348590345}
   target2: {fileID: 1286474402}
   target3: {fileID: 1815566801}
+  player: {fileID: 1010892332}
   isActive: 0

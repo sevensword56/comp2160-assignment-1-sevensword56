@@ -8,6 +8,7 @@ public class WallSpawner : MonoBehaviour
     public Transform target1;
     public Transform target2;
     public Transform target3;
+    public Transform player;
     public bool isActive = false;
 
     private Transform targetFinal;
@@ -46,6 +47,7 @@ public class WallSpawner : MonoBehaviour
             enemy.transform.parent = transform;
             enemy.transform.position = transform.position;
             enemy.target = targetFinal;
+            enemy.player = player;
             targetSelected = false;
             isActive = false;
         }

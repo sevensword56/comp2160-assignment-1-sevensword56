@@ -51,4 +51,10 @@ public class Player : MonoBehaviour
             bullet.xMovement = fireHorizontal;
         }
     }
+
+    void OnCollisionEnter2D (Collision2D collision)
+    {
+        if(collision.gameObject.GetComponent(typeof(Enemy)) != null)
+            Destroy(gameObject);
+    }
 }
