@@ -7,10 +7,8 @@ public class Player : MonoBehaviour
     public float playerSpeed = 1.0f;
     public Bullet bulletPrefab;
     public float bulletDelay = 1.0f;
-    public int coinScore = 200;
 
     private float timer = 0.0f;
-    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -54,11 +52,6 @@ public class Player : MonoBehaviour
         }
 
         
-    }
-
-    public void ScoreKeeper ()
-    {
-        score += coinScore;
     }
 
     void OnCollisionEnter2D (Collision2D collision)

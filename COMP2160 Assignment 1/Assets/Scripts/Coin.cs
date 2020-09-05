@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float delay = 5.0f;
-    public Player playerScript;
+    public ScoreKeeper scoreKeeper;
 
     private float timeActive = 0.0f;
     // Start is called before the first frame update
@@ -27,7 +27,8 @@ public class Coin : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        playerScript.ScoreKeeper();
+        if(collision.gameObject.GetComponent(typeof(Player)) != null)
+            scoreKeeper.AddScore();
         Destroy(gameObject);
     }
 }

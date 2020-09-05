@@ -10,7 +10,7 @@ public class WallSpawner : MonoBehaviour
     public Transform target3;
     public Transform player;
     public bool isActive = false;
-    public Player playerScript;
+    public ScoreKeeper scoreKeeper;
 
     private Transform targetFinal;
     private bool targetSelected = false;
@@ -49,7 +49,7 @@ public class WallSpawner : MonoBehaviour
             enemy.transform.position = transform.position;
             enemy.target = targetFinal;
             enemy.player = player;
-            enemy.playerScript = playerScript;
+            enemy.scoreKeeper = scoreKeeper;
             targetSelected = false;
             isActive = false;
         }

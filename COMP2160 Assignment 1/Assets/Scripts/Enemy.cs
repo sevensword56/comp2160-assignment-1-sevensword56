@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public float enemySpeed = 1.0f, minBulletTime = 1.0f, maxBulletTime = 1.0f;
     public BulletEnemy bulletPrefab;
     public Coin coinPrefab;
-    public Player playerScript;
+    public ScoreKeeper scoreKeeper;
 
     private float randomBulletTime = 1.0f, timeActive = 0.0f;
     private bool hasShot = false;
@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
     {
         Coin coin = Instantiate(coinPrefab);
         coin.transform.position = transform.position;
-        coin.playerScript = playerScript;
+        coin.scoreKeeper = scoreKeeper;
         Destroy(gameObject);
     }
 }
