@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         {
             BulletEnemy bullet = Instantiate(prefab);
             bullet.transform.position = transform.position;
-            bullet.transform.parent = transform;
+            //bullet.transform.parent = transform;
             bullet.playerDirection = player.position;
             hasShot = true;
         }

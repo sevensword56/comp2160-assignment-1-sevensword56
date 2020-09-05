@@ -12,7 +12,7 @@ public class BulletEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        endDirection = playerDirection;
+        endDirection = transform.TransformPoint(transform.InverseTransformPoint(playerDirection)*10);
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class BulletEnemy : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, endDirection, (bulletSpeed * Time.deltaTime));
 
-        if(transform.position == endDirection)
-            endDirection *= 2;
+        //if(transform.position == endDirection)
+        //    endDirection *= 2;
     }
 }
