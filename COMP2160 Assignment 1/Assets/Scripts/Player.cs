@@ -1,19 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public float playerSpeed = 1.0f;
     public Bullet bulletPrefab;
     public float bulletDelay = 1.0f;
+    public ScoreKeeper scoreKeeper;
 
     private float timer = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject findSingle = GameObject.Find("ScoreKeeper");
+
+        if(findSingle != null)
+        {
+            scoreKeeper = findSingle.gameObject.GetComponent(typeof(ScoreKeeper)) as ScoreKeeper;
+        }
+        else
+        {
+            Debug.LogError("Could not find ScoreKeeper");
+        }
     }
 
     // Update is called once per frame
@@ -57,8 +68,15 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D (Collision2D collision)
     {
         if(collision.gameObject.GetComponent(typeof(Enemy)) != null)
+        {
             Destroy(gameObject);
+            
+            scoreKeeper.Reset();
+        }
         if(collision.gameObject.GetComponent(typeof(BulletEnemy)) != null)
+        {
             Destroy(gameObject);
+            scoreKeeper.Reset();
+        }
     }
 }

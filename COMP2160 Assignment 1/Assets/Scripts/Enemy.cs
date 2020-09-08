@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, target.position, (enemySpeed * Time.deltaTime));
 
-        if(randomBulletTime >= timeActive && hasShot == false)
+        if(randomBulletTime >= timeActive && hasShot == false && player != null)
         {
             BulletEnemy bullet = Instantiate(bulletPrefab);
             bullet.transform.position = transform.position;

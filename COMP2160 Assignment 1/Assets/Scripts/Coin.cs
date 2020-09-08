@@ -11,7 +11,16 @@ public class Coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject findSingle = GameObject.Find("ScoreKeeper");
+
+        if(findSingle != null)
+        {
+            scoreKeeper = findSingle.gameObject.GetComponent(typeof(ScoreKeeper)) as ScoreKeeper;
+        }
+        else
+        {
+            Debug.LogError("Could not find ScoreKeeper");
+        }   
     }
 
     // Update is called once per frame
