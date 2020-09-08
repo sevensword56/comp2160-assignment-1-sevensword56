@@ -37,7 +37,9 @@ public class Coin : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent(typeof(Player)) != null)
+        {
             scoreKeeper.AddScore();
+        }
         Destroy(gameObject);
     }
 }

@@ -6,8 +6,18 @@ public class SpawnerController : MonoBehaviour
 {
     public float enemyDelayMin = 1.0f, enemyDelayMax = 2.0f, timeOfStages = 30.0f;
     public int minAtSpawn = 1, maxAtSpawn = 5;
-    public WallSpawner topLeft, topMiddle, topRight, rightTop, rightMiddle, rightBottom
-    , bottomLeft, bottomMiddle, bottomRight, leftTop, leftMiddle, leftBottom;
+    public WallSpawner topLeft;
+    public WallSpawner topMiddle;
+    public WallSpawner topRight;
+    public WallSpawner rightTop;
+    public WallSpawner rightMiddle;
+    public WallSpawner rightBottom;
+    public WallSpawner bottomLeft;
+    public WallSpawner bottomMiddle;
+    public WallSpawner bottomRight;
+    public WallSpawner leftTop;
+    public WallSpawner leftMiddle;
+    public WallSpawner leftBottom;
 
     private float timer = 1.0f;
     private float timeActive = 1.0f;
@@ -37,10 +47,14 @@ public class SpawnerController : MonoBehaviour
         if(timeOfNextChange <= timeActive && currentStage < totalStages)
         {
             if(spawnNumber <= maxAtSpawn)
+            {
                 spawnNumber ++;
+            }
             if(currentSpawnDelay >= enemyDelayMin)
+            {
                 currentSpawnDelay -= delayChange;
-            
+            }
+
             timeOfNextChange += timeOfStages;
             currentStage ++;
         }
@@ -49,6 +63,7 @@ public class SpawnerController : MonoBehaviour
 
         if(timer <= 0)
         {
+            timer = currentSpawnDelay;
             for(int i=0; i < spawnNumber; i++)
             {
                 int spawnerSelector = Random.Range(1, 13);
@@ -93,8 +108,6 @@ public class SpawnerController : MonoBehaviour
                         break;
                 }
             }
-
-            timer = currentSpawnDelay;
         }
     }
 }

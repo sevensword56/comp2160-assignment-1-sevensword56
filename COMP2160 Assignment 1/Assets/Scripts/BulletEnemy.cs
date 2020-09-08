@@ -6,8 +6,8 @@ public class BulletEnemy : MonoBehaviour
 {
     public Vector3 playerDirection;
     public float bulletSpeed = 5.0f;
-
-    public Vector3 endDirection;
+    
+    private Vector3 endDirection;
 
     // Start is called before the first frame update
     void Start()

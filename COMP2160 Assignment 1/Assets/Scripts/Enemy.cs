@@ -6,12 +6,15 @@ public class Enemy : MonoBehaviour
 {
     public Transform target;
     public Transform player;
-    public float enemySpeed = 1.0f, minBulletTime = 1.0f, maxBulletTime = 1.0f;
+    public float enemySpeed = 1.0f;
+    public float minBulletTime = 1.0f;
+    public float maxBulletTime = 1.0f;
     public BulletEnemy bulletPrefab;
     public Coin coinPrefab;
     public ScoreKeeper scoreKeeper;
 
-    private float randomBulletTime = 1.0f, timeActive = 0.0f;
+    private float randomBulletTime = 1.0f;
+    private float timeActive = 0.0f;
     private bool hasShot = false;
 
     // Start is called before the first frame update
